@@ -11,7 +11,7 @@ namespace aspproject.Data
         public AuthRepository(DataContext context)
         {
             _context = context;
-
+            
         }
         public async Task<users> Login(string username, string password)
         {
