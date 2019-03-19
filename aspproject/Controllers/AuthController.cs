@@ -43,6 +43,7 @@ namespace aspproject.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> login(loginDtos login)
         {
+            //throw new Exception("Computer says no!");
             var userFromRepo = await _Repo.Login(login.Username, login.Password);
             if (userFromRepo == null)
                 return Unauthorized();
