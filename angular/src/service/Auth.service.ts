@@ -22,5 +22,8 @@ login(model: any) {
 register(model: any) {
   return this.httClient.post('http://localhost:5000/api/Auth/register', model);
 }
-
+loggedIn() {
+  const token = localStorage.getItem('token');
+  return !!token;
+}
 }
